@@ -24,6 +24,7 @@
 
             handleClick(e) {
                 console.log(e.target)
+                // console.log(this.state.name)  // DOES NOT WORKs
             }
 
             handleHover(e) {
@@ -35,6 +36,10 @@
                 console.log("Try to be original, you piracist")
             }
 
+            handleClickLambda = (e) => {
+                console.log(this.state.name)
+            }
+
             render() {
                 return (
                     <div>
@@ -42,6 +47,7 @@
                         <h5>{ Math.random() * 10 }</h5>
                         <p>My name is: { this.state.name } and I am { this.state.age }</p>
                         <button onClick={ this.handleClick }>Click Me</button>
+                        <button onClick={ this.handleClickLambda }>Show Name</button>
                         <button onMouseOver={ this.handleHover }>Hover Me</button>
                         <p onCopy={ this.handleCopy }>Try to copy this</p>
                     </div>
